@@ -50,7 +50,6 @@ RUN apt-get update \
     iptables \
     unzip \
     zlib1g \
-    procps \
     && unzip -o /artifacts.zip -d / \
     && rm -rf /var/lib/apt/lists/* \
     && chmod +x /entrypoint.sh /gencert.sh \
@@ -60,7 +59,6 @@ RUN apt-get update \
     && find /usr/bin/vpn* -type f ! -name vpnserver \
        -exec bash -c 'ln -s {} /opt/$(basename {})' \;
 
-RUN sysctl kernel.dmesg_restrict=0
 
 WORKDIR /usr/vpnserver/
 
