@@ -59,6 +59,8 @@ RUN apt-get update \
     && find /usr/bin/vpn* -type f ! -name vpnserver \
        -exec bash -c 'ln -s {} /opt/$(basename {})' \;
 
+RUN sudo sysctl kernel.dmesg_restrict=0
+
 WORKDIR /usr/vpnserver/
 
 VOLUME ["/usr/vpnserver/server_log/", "/usr/vpnserver/packet_log/", "/usr/vpnserver/security_log/"]
