@@ -7,7 +7,7 @@ PLUGIN_USER ?= lukics
 PLUGIN_NAME ?= softether
 PLUGIN_TAG ?= armv7
 PLUGIN_IMAGE ?= $(PLUGIN_USER)/$(PLUGIN_NAME):$(PLUGIN_TAG)
-DOCKERFILE ?= ./Dockerfile
+DOCKERFILE ?= ./Dockerfile.debian
 
 ERROR_COLOR=\033[31;01m
 NO_COLOR=\033[0m
