@@ -29,7 +29,6 @@ RUN apt-get update \
     zlib1g \
     zlib1g-dev \
     zip \
-    procps \
     && cd /usr/local/src/SoftEtherVPN_Stable-* \
     && ./configure \
     && make \
@@ -51,6 +50,7 @@ RUN apt-get update \
     iptables \
     unzip \
     zlib1g \
+    procps \
     && unzip -o /artifacts.zip -d / \
     && rm -rf /var/lib/apt/lists/* \
     && chmod +x /entrypoint.sh /gencert.sh \
